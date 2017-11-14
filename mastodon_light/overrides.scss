@@ -18,6 +18,14 @@
   }
 }
 
+.icon-button.overlayed {
+  background: rgba($white, .6);
+
+  &:hover {
+    background: rgba($white, .6);
+  }
+}
+
 // Boost button
 @function hex-color($color) {
   @if type-of($color) == 'color' {
@@ -46,13 +54,18 @@ button.icon-button.disabled i.fa-retweet {
 .status__content,
 .reply-indicator__content, {
   .status__content__spoiler-link {
-    background: $status-spoilers-background;
-    color: $status-spoilers-text;
-
+    background-color: lighten($classic-secondary-color, 10%);
+    color: $black;
+  
+    &:focus,
     &:hover,
-    &:active,
-    &:focus {
-      background: $status-spoilers-active-background;
+    &:active {
+      background-color: lighten($classic-highlight-color, 10%); 
+    }
+  
+    &:disabled {
+      background-color: rgba($classic-secondary-color, .4);
+      color: rgba($black, .4);
     }
   }
 }
@@ -84,4 +97,51 @@ button.icon-button.disabled i.fa-retweet {
       color: $status-buttons-disabled-color;
     }
   }
+}
+
+.compose-form__warning {
+  background: $classic-base-color;
+}
+
+.reply-indicator {
+  background: $classic-base-color;
+  color: $black;
+
+  * {
+    color: inherit;
+  }
+}
+
+.privacy-dropdown__option,
+.privacy-dropdown__option__content strong {
+  color: $classic-primary-color;
+}
+
+.media-spoiler {
+  color: $classic-primary-color;
+  background: lighten($classic-base-color, 15%);
+
+  &:hover {
+    color: $classic-highlight-color;
+  }
+}
+
+.button {
+  background-color: lighten($classic-secondary-color, 10%);
+  color: $black;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: lighten($classic-highlight-color, 10%); 
+  }
+
+  &:disabled {
+    background-color: rgba($classic-secondary-color, .4);
+    color: rgba($black, .4);
+  }
+}
+
+.upload-progress__tracker {
+  background: $classic-primary-color;
 }
