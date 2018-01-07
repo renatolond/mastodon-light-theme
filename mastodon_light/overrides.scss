@@ -75,8 +75,8 @@ button.icon-button.disabled i.fa-retweet {
   background: darken($classic-base-color, 15%);
 }
 
-.autosuggest-textarea__textarea, 
-.spoiler-input__input {
+.compose-form .autosuggest-textarea__textarea, 
+.compose-form .spoiler-input__input {
   color: $black;
 }
 
