@@ -72,7 +72,7 @@ button.icon-button.disabled i.fa-retweet {
 
 // Toot input
 .drawer__inner {
-  background: darken($classic-base-color, 15%);
+  background: darken($classic-base-color, 15%) url('../images/wave-drawer.png') no-repeat bottom / 100% auto;
 }
 
 .compose-form .autosuggest-textarea__textarea, 
